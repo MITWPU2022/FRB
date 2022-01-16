@@ -1,2 +1,3 @@
-# FRB
- 
+# leanring phase and yet to complete this code ... 
+
+# only Study
