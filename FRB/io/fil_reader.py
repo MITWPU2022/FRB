@@ -1,9 +1,7 @@
 r'''Reader for Filterbank files (.fil)'''
 
 import os
-
 import numpy as np
-
 from FRB.io import sigproc
 from FRB.io.base_reader import Reader, logger, GIGA
 
@@ -24,9 +22,7 @@ class FilReader(Reader):
             max_load (float): memory limit in gigabytes
         """
         super(FilReader, self).__init__()
-
         self.header_keywords_types = sigproc.header_keyword_types
-
         if filename and os.path.isfile(filename):
             self.filename = filename
             self.load_data = load_data

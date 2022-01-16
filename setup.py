@@ -6,7 +6,7 @@ __version__ = '0.0.2'
 
 entry_points = {
     'console_scripts' : [
-    #
+        'search_FRB = FRB.search_FRB:cmd_tool',
      ]
 }
 

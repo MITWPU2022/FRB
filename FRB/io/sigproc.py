@@ -280,14 +280,11 @@ def to_sigproc_keyword(keyword, value=None):
 
 def generate_sigproc_header(f):
     """ Generate a serialzed sigproc header which can be written to disk.
-
     Args:
         f (Filterbank object): Filterbank object for which to generate header
-
     Returns:
         header_str (str): Serialized string corresponding to header
     """
-
     header_string = b''
     header_string += to_sigproc_keyword('HEADER_START')
 
