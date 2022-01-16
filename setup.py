@@ -36,7 +36,7 @@ extras_require = {
       ]
 }
 
-setup(name='FRB_Finder',
+setup(name='FRB',
       version=__version__,
       description='Python package for FRB',
       long_description='long_description',
