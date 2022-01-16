@@ -1,5 +1,5 @@
 from .config import *
-from . import plot_time_series, plot_kurtosis, plot_spectrum_min_max, plot_waterfall, plot_spectrum
+from . import plot_time_series, plot_kurtosis, plot_spectrum_min_max, plot_dynamic_spectrum, plot_spectrum
 from astropy import units as u
 
 
@@ -74,7 +74,7 @@ def plot_all(wf, t=0, f_start=None, f_stop=None, logged=False, if_id=0, kurtosis
     # --------
     axWaterfall = plt.axes(rect_waterfall,sharex=axMinMax)
     print('Plotting search_FRB')
-    plot_waterfall(wf, f_start=f_start, f_stop=f_stop, logged=logged, cb=False)
+    plot_dynamic_spectrum(wf, f_start=f_start, f_stop=f_stop, logged=logged, cb=False)
     plt.xlabel('')
 
     # no labels

@@ -114,12 +114,12 @@ class search_FRB():
 
         # Attach methods
         self.plot_spectrum         = six.create_bound_method(plot_spectrum, self)
-        self.plot_waterfall        = six.create_bound_method(plot_waterfall, self)
+        self.plot_dynamic_spectrum        = six.create_bound_method(plot_dynamic_spectrum, self)
         self.plot_kurtosis         = six.create_bound_method(plot_kurtosis, self)
         self.plot_time_series      = six.create_bound_method(plot_time_series, self)
         self.plot_all              = six.create_bound_method(plot_all, self)
         self.plot_spectrum_min_max = six.create_bound_method(plot_spectrum_min_max, self)
-    
+
     def __load_data(self):
         """ Helper for loading data from a container. Should not be called manually. """
 
@@ -357,7 +357,7 @@ class search_FRB():
                 if chtest < 5:
                     break
                 data[..., ss+mid_chan] = np.median(w_slice)
-        
+
         parse(self.data, n_coarse_chan, n_chan_per_coarse, mid_chan)
 
     def calibrate_band_pass_N1(self):
@@ -462,7 +462,7 @@ def cmd_tool(args=None):
             fil.plot_all(logged=True, f_start=parse_args.f_start, f_stop=parse_args.f_stop, t='all',kutosis=False)
         else: # parse_args.what_to_plot = "w"
             plt.figure("search_FRB", figsize=(8, 6))
-            fil.plot_waterfall(f_start=parse_args.f_start, f_stop=parse_args.f_stop)
+            fil.plot_dynamic_spectrum(f_start=parse_args.f_start, f_stop=parse_args.f_stop)
 
         if parse_args.plt_filename != '':
             plt.savefig(parse_args.plt_filename)

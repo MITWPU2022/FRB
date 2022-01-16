@@ -33,7 +33,7 @@ font = {"family" : "DejaVu Sans",
 MAX_IMSHOW_POINTS = (4096, 1268)
 
 
-def plot_waterfall(wf, f_start=None, f_stop=None, **kwargs):
+def plot_dynamic_spectrum(wf, f_start=None, f_stop=None, **kwargs):
     r"""
     Plot search_FRB of data in a .fil or .h5 file.
 
@@ -222,7 +222,7 @@ def make_waterfall_plots(file_list, plot_dir, plot_dpi, height_ratios, f_start=N
             continue # Skip this file.
 
         # Plot the search_FRB for the current figure.
-        last_plot = plot_waterfall(wf,
+        last_plot = plot_dynamic_spectrum(wf,
                                    f_start=the_lowest,
                                    f_stop=the_highest,
                                    **kwargs)

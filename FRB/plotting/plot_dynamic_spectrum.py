@@ -3,7 +3,7 @@ from ..utils import rebin, db
 from .plot_utils import calc_extent
 
 
-def plot_waterfall(wf, f_start=None, f_stop=None, if_id=0, logged=True, cb=True, MJD_time=False, **kwargs):
+def plot_dynamic_spectrum(wf, f_start=None, f_stop=None, if_id=0, logged=True, cb=True, MJD_time=False, **kwargs):
     """ Plot search_FRB of data
 
     Args:
@@ -15,10 +15,10 @@ def plot_waterfall(wf, f_start=None, f_stop=None, if_id=0, logged=True, cb=True,
     """
 
     plot_f, plot_data = wf.grab_data(f_start, f_stop, if_id)
-    
+
     # imshow does not support int8, so convert to floating point
     plot_data = plot_data.astype('float32')
-    
+
     # Using accending frequency for all plots.
     if wf.header['foff'] < 0:
         plot_data = plot_data[..., ::-1]  # Reverse data

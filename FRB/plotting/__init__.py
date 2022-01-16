@@ -1,4 +1,4 @@
-from .plot_waterfall import plot_waterfall
+from .plot_dynamic_spectrum import plot_dynamic_spectrum
 from .plot_spectrum import plot_spectrum
 from .plot_spectrum_min_max import plot_spectrum_min_max
 from .plot_kurtosis import plot_kurtosis

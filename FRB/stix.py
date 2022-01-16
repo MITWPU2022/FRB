@@ -20,7 +20,7 @@ matplotlib.use("agg")
 
 # FRB imports
 from FRB import search_FRB
-from FRB.plotting import plot_waterfall
+from FRB.plotting import plot_dynamic_spectrum
 
 
 def image_stitch(orientation, chunk_count, png_collection, path_saved_png):
@@ -166,10 +166,10 @@ def make_waterfall_plots(input_file, chunk_count, plot_dir, width, height, dpi, 
         logger.debug("stix: Processing chunk {} of {}, frequency lowest={}, highest={}"
                     .format(ii, chunk_count - 1, ii_lowest, ii_highest))
 
-        # Make plot for this frequency chunk with plot_waterfall().
+        # Make plot for this frequency chunk with plot_dynamic_spectrum().
         wf.header["source_name"] = source_name + " chunk " + str(ii + 1) + " of " + str(chunk_count)
         plt.figure(wf.header["source_name"], figsize=(width, height), dpi=dpi)
-        plot_waterfall(wf, f_start=ii_lowest, f_stop=ii_highest)
+        plot_dynamic_spectrum(wf, f_start=ii_lowest, f_stop=ii_highest)
 
         # Save the figures.
         path_png = dirpath + source_name + "_chunk_{}".format(ii + 1) + ".png"
