@@ -1,8 +1,4 @@
-"""
-setup.py -- setup script for use of packages.
-"""
 from setuptools import setup, find_packages
-
 __version__ = '0.0.2'
 #
 # with open("README.md", "r") as fh:
@@ -41,12 +37,12 @@ setup(name='FRB',
           'Development Status :: DEV',
           'Environment :: Console',
           'Natural Language :: English',
-          'Operating System :: POSIX :: Windows 11',
+          'Operating System :: Windows :: 11',
           'Programming Language :: Python :: 3.8',
-          'Intended Audience :: Research',
+          'Intended Audience :: Researcher',
           'Topic :: CSE :: AIML',
       ],
-      setup_requires=['pytest-runner'],
-      tests_require=['pytest', 'pyslalib'],
-      test_suite="FRBTEST",
+      #setup_requires=['pytest-runner'],
+      #tests_require=['pytest', 'pyslalib'],
+      #test_suite="FRBTEST",
 )
