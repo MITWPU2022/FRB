@@ -10,20 +10,7 @@ __version__ = '0.0.2'
 
 entry_points = {
     'console_scripts' : [
-        'watutil = FRB.search_FRB:cmd_tool',
-        'rawutil = FRB.guppi:cmd_tool',
-        'fil2h5 = FRB.fil2h5:cmd_tool',
-        'h52fil = FRB.h52fil:cmd_tool',
-        'h5diag = FRB.h5diag:cmd_tool',
-        'bl_scrunch = FRB.bl_scrunch:cmd_tool',
-        'matchfils = FRB.match_fils:cmd_tool',
-        'bldice = FRB.dice:cmd_tool',
-        'calcload = FRB.calcload:cmd_tool',
-        'rawhdr = FRB.rawhdr:cmd_tool',
-        'stax = FRB.stax:cmd_tool',
-        'stix = FRB.stix:cmd_tool',
-        'peek = FRB.peek:cmd_tool',
-        'srcname = FRB.srcname:cmd_tool',
+    #
      ]
 }
 

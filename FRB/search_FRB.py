@@ -207,7 +207,6 @@ class search_FRB():
             Notes:
                 A 'blob' is the max size that will be read into memory at once.
                 A 'chunk' is a HDF5 concept to do with efficient read access, see
-                https://portal.hdfgroup.org/display/HDF5/Chunking+in+HDF5
 
             Args:
                 chunk_dim (array of ints): Shape of chunk, e.g. (1024, 1, 768)
