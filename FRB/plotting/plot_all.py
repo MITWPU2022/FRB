@@ -35,24 +35,7 @@ def plot_all(wf, t=0, f_start=None, f_stop=None, logged=False, if_id=0, kurtosis
     rect_kurtosis = [left3, bottom3, 0.25, height2]
     rect_header = [left3 - .05, bottom, 0.2, height]
 
-    # --------
-    #         axColorbar = plt.axes(rect_colorbar)
-    #         print 'Ploting Colorbar'
-    #         print plot_data.max()
-    #         print plot_data.min()
-    #
-    #         plot_colorbar = range(plot_data.min(),plot_data.max(),int((plot_data.max()-plot_data.min())/plot_data.shape[0]))
-    #         plot_colorbar = np.array([[plot_colorbar],[plot_colorbar]])
-    #
-    #         plt.imshow(plot_colorbar,aspect='auto', rasterized=True, interpolation='nearest',)
 
-    #         axColorbar.xaxis.set_major_formatter(nullfmt)
-    #         axColorbar.yaxis.set_major_formatter(nullfmt)
-
-    #         heatmap = axColorbar.pcolor(plot_data, edgecolors = 'none', picker=True)
-    #         plt.colorbar(heatmap, cax = axColorbar)
-    # --------
-    
     axMinMax = plt.axes(rect_min_max)
     print('Plotting Min Max')
     plot_spectrum_min_max(wf, logged=logged, f_start=f_start, f_stop=f_stop, t=t)
